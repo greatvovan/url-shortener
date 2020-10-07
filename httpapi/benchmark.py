@@ -26,7 +26,7 @@ async def bechmarch_shoertenings():
     end = time.monotonic()
     dur = end - start
     rate = shortenings_count / dur
-    print(f'{shortenings_count} shortenings done in {round(dur, 1)} ({round(rate)}/s)')
+    print(f'{shortenings_count} shortenings done in {round(dur, 1)} s ({round(rate)}/s)')
 
 
 async def bechmarch_redirects():
@@ -35,7 +35,7 @@ async def bechmarch_redirects():
     end = time.monotonic()
     dur = end - start
     rate = shortenings_count / dur
-    print(f'{shortenings_count} redirects done in {round(dur, 1)} ({round(rate)}/s)')
+    print(f'{shortenings_count} redirects done in {round(dur, 1)} s ({round(rate)}/s)')
 
 
 async def multiply(coroutine, number: int):
