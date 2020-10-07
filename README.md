@@ -54,7 +54,7 @@ Store a URL and get a short redirection link or key.
 
 **Body**
 
-Long URL as a string encoded by UTF-8.
+Long URL as a string encoded in UTF-8.
 
 **Response codes**
 - `200`: the URL was stored and a key returned.
@@ -89,3 +89,5 @@ If such validation is necessary, it should be performed on the client side.
 
 - The service is not protected from abuse (storing overwhelming amount of meaningless long URLs).
 Such protection should be considered and put as a filter in front of this API.
+
+- Expiration date is set for a key, but expiration/recycling job is not implemented.
