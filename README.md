@@ -33,7 +33,7 @@ As the generation takes time, consider small numbers for the beginning (e.g. 3):
 1. When you are done with playing, you can shut down everything by:  
 `$ docker-compose down`  
 `docker-compose` will create a volume named `urlstorage` to persist the data,
-so next time you launch `docker-compose up` in the same directory and all urls will be in place.
+so next time you launch `docker-compose up` in the same directory, all urls will be in place.
 If you want to delete the volume (and the data) say  
 `$ docker volume rm urlstorage`  
 (you may need to remove containers for that) or use `-v` option of `docker-compose down`.
