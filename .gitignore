@@ -1,0 +1,4 @@
+storage/data/*
+.idea/
+__pycache__/
+tests/.pytest_cache/
