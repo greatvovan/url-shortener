@@ -2,7 +2,7 @@
 
 A simple HTTP API that can be used for URL shortening (no UI).
 
-The service uses [Tarantool](https://www.tarantool.io/) database as the primary storage and a small in-memory LRU cache.
+The service uses [Tarantool](https://www.tarantool.io/) database as the primary storage and a small in-process TTL cache.
 
 ## Installation
 
@@ -33,10 +33,10 @@ As the generation takes time, consider small numbers for the beginning (e.g. 3):
 1. When you are down with playing, you can shut down everything by:  
 `$ docker-compose down`  
 `docker-compose` will create a volume named `urlstorage` to persist the data,
-so next time you launch `docker-compose up` in the same directory all urls will be in place.
+so next time you launch `docker-compose up` in the same directory and all urls will be in place.
 If you want to delete the volume (and the data) say  
-`$ docker volumes rm urlstorage`  
-or use `-v` option of `docker-compose down`.
+`$ docker volume rm urlstorage`  
+(you may need to remove containers for that) or use `-v` option of `docker-compose down`.
 
 ## Endpoints
 

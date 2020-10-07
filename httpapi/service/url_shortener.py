@@ -19,7 +19,7 @@ class UrlShortener:
         now = datetime.utcnow()
         return await self.url_storage.store_url(url, now, now + retention)
 
-    @cached(cache=Cache.MEMORY, ttl=20)
+    @cached(cache=Cache.MEMORY, ttl=300)
     async def elongate(self, key: str) -> str:
         return await self.url_storage.get_url(key)
 

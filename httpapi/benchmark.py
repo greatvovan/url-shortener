@@ -4,7 +4,7 @@ import asyncio
 import aiohttp
 
 
-api_url = os.getenv('API_URL', 'http://localhost:8081')
+api_url = os.getenv('API_URL', 'http://localhost:8080')
 shortenings_limit = 1000
 shortenings_count = 0
 redirects_count = 0
