@@ -16,8 +16,10 @@ The service uses [Tarantool](https://www.tarantool.io/) database as the primary 
 1. Initialize the storage (first time only).  
 The service uses pre-generated space of keys, that work as path in short URLs.
 You need to decide the length of keys you want to use. The service uses 64 characters as alphabet base,
-so the number of keys is specified by the formula:  
+so the number of keys is determined by the formula:  
+  
 _N = 64^length_  
+  
 As the generation takes time, consider small numbers for the beginning (e.g. 3):  
 `$ docker-compose exec storage console`  
 `unix/:/var/run/tarantool/tarantool.sock> init_storage(3)`
